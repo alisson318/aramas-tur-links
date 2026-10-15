@@ -2,15 +2,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PiArrowLeft } from "react-icons/pi";
 
-import Footer from "@/components/footer";
+import Footer, { type FaqItem } from "@/components/footer";
 import NavigationCard from "@/components/navigation-card";
 import Header from "@/modules/home/ui/components/header";
 
 export const metadata: Metadata = {
   title: "Roteiros",
   description:
-    "Conheça os roteiros da Aramas Tur e escolha o seu próximo destino.",
+    "Conheça os nossos roteiros através de viagens reais que já fizemos. Descubra como é a experiência inesquecível de viajar com a Aramas Tur.",
 };
+
+const roteirosFaqItems: FaqItem[] = [
+  {
+    question:
+      "Os roteiros mostrados aqui são exatamente iguais para todas as viagens?",
+    answer:
+      "Os destinos e fotos desta página ilustram experiências incríveis que já vivemos com nossos clientes. O itinerário exato, as paradas e os atrativos podem variar dependendo do pacote específico, da época do ano e da duração da viagem.",
+  },
+  {
+    question: "Como sei exatamente o que está incluso no meu pacote?",
+    answer:
+      "Cada viagem possui um descritivo próprio. Recomendamos sempre conferir o roteiro detalhado e os passeios inclusos diretamente na página de vendas onde você vai adquirir a sua passagem, ou tirando dúvidas com a nossa equipe de atendimento.",
+  },
+  {
+    question: "As refeições e hospedagens estão inclusas?",
+    answer:
+      "Isso varia de acordo com cada viagem. A quantidade de refeições, o tipo de hospedagem, a duração e o preço dependem do pacote escolhido. Por isso, no momento da compra, é fundamental conferir todas essas informações na página de vendas do pacote ou entrar em contato com a nossa equipe para não ter erro.",
+  },
+  {
+    question: "Gostei de um destino! Os preços são fixos?",
+    answer:
+      "Não. Os valores variam conforme a data, feriados e as opções de cada pacote. Fale com nossa equipe no WhatsApp ou acesse a nossa página de compras para conferir os pacotes abertos no momento e garantir o seu lugar.",
+  },
+];
 
 const destinations = [
   {
@@ -95,7 +119,9 @@ const RoteirosPage = () => {
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl lg:text-3xl">Nossos Roteiros</h1>
             <p className="text-text-muted text-[15px]">
-              Escolha o seu próximo destino e viaje com a Aramas Tur.
+              Conheça os nossos roteiros através de viagens reais que já
+              fizemos. Descubra como é a experiência inesquecível de viajar com
+              a Aramas Tur.
             </p>
           </div>
         </section>
@@ -110,7 +136,7 @@ const RoteirosPage = () => {
           ))}
         </div>
 
-        <Footer />
+        <Footer faqItems={roteirosFaqItems} />
       </main>
     </>
   );

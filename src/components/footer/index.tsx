@@ -7,7 +7,12 @@ import {
 } from "@/components/ui/accordion";
 import { siteConfig } from "@/site.config";
 
-const faqItems = [
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+const defaultFaqItems: FaqItem[] = [
   {
     question: "Quais são as formas de pagamento?",
     answer:
@@ -40,7 +45,11 @@ const faqItems = [
   },
 ];
 
-const Footer = () => {
+interface FooterProps {
+  faqItems?: FaqItem[];
+}
+
+const Footer = ({ faqItems = defaultFaqItems }: FooterProps) => {
   return (
     <div className="flex flex-col items-center lg:items-start p-16 pb-12 gap-8 lg:gap-16 rounded-xl font-light relative flex-1 bg-primary text-white dark:text-black">
       <div className="flex flex-col lg:flex-row gap-4 items-center">
