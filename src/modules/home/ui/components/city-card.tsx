@@ -1,6 +1,3 @@
-"use client";
-
-import { useRouter } from "next/navigation";
 import BlurImage from "@/components/blur-image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import VectorTopLeftAnimation from "./vector-top-left-animation";
@@ -18,13 +15,8 @@ interface Props {
 }
 
 const CityCard = ({ title, coverPhoto }: Props) => {
-  const router = useRouter();
-
   return (
-    <div
-      className="w-full relative group cursor-pointer"
-      onClick={() => router.push(`/travel/${title}`)}
-    >
+    <div className="w-full relative group">
       <AspectRatio
         ratio={0.75 / 1}
         className="overflow-hidden rounded-lg relative"
