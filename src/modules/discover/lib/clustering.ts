@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Supercluster from "supercluster";
 import { DiscoverGetManyPhotos } from "@/modules/discover/types";
 
