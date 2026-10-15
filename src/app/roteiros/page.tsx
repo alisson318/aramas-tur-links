@@ -1,0 +1,119 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { PiArrowLeft } from "react-icons/pi";
+
+import Footer from "@/components/footer";
+import NavigationCard from "@/components/navigation-card";
+import Header from "@/modules/home/ui/components/header";
+
+export const metadata: Metadata = {
+  title: "Roteiros",
+  description:
+    "Conheça os roteiros da Aramas Tur e escolha o seu próximo destino.",
+};
+
+const destinations = [
+  {
+    title: "Beto Carrero",
+    image: "/imagens/beto-carrero.jpg",
+    href: "https://aramastur.com/beto-carrero/",
+  },
+  {
+    title: "Gramado e Canela",
+    image: "/imagens/gramado-canela.jpg",
+    href: "https://aramastur.com/gramado-e-canela",
+  },
+  {
+    title: "Foz do Iguaçu e Argentina",
+    image: "/imagens/foz-argentina.jpg",
+    href: "https://aramastur.com/foz-e-argentina",
+  },
+  { title: "Ilha do Mel", image: "/imagens/ilha-do-mel.jpg", href: "#" },
+  {
+    title: "Balneário Camboriú",
+    image: "/imagens/balneario-camboriu.jpg",
+    href: "https://aramastur.com/balneario-camburiu/",
+  },
+  {
+    title: "Itapema",
+    image: "/imagens/itapema.jpg",
+    href: "https://aramastur.com/itapema",
+  },
+  {
+    title: "Costão do Santinho",
+    image: "/imagens/costao-santinho.jpg",
+    href: "https://aramastur.com/costao-do-santinho/",
+  },
+  {
+    title: "Curitiba e Morretes",
+    image: "/imagens/curitiba-morretes.jpg",
+    href: "https://aramastur.com/curitiba-e-morretes",
+  },
+  { title: "Cabo Frio", image: "/imagens/cabo-frio.jpg", href: "#" },
+  { title: "Holambra", image: "/imagens/holambra.jpg", href: "#" },
+  {
+    title: "Buraco do Padre e Vila Velha",
+    image: "/imagens/buraco-vila-velha.jpg",
+    href: "#",
+  },
+  {
+    title: "Jogo do Corinthians",
+    image: "/imagens/jogo-corinthians.jpg",
+    href: "https://aramastur.com/corinthians/",
+  },
+  {
+    title: "Aparecida do Norte e Campos do Jordão",
+    image: "/imagens/aparecida-campos.jpg",
+    href: "#",
+  },
+  {
+    title: "Compras no Brás",
+    image: "/imagens/compras-bras.jpg",
+    href: "#",
+  },
+  {
+    title: "Aparecida do Norte",
+    image: "/imagens/aparecida.jpg",
+    href: "https://aramastur.com/aparecida-do-norte/",
+  },
+];
+
+const RoteirosPage = () => {
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen p-3 space-y-3">
+        <section className="flex flex-col gap-6 px-6 pb-6 pt-16 lg:px-10 lg:pb-10 lg:pt-20 bg-muted rounded-xl font-light">
+          <Link
+            href="/"
+            className="w-fit flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-foreground"
+          >
+            <PiArrowLeft size={16} />
+            Voltar
+          </Link>
+
+          <div className="flex flex-col gap-2">
+            <h1 className="text-2xl lg:text-3xl">Nossos Roteiros</h1>
+            <p className="text-text-muted text-[15px]">
+              Escolha o seu próximo destino e viaje com a Aramas Tur.
+            </p>
+          </div>
+        </section>
+
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3">
+          {destinations.map((destination) => (
+            <NavigationCard
+              key={destination.title}
+              {...destination}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
+            />
+          ))}
+        </div>
+
+        <Footer />
+      </main>
+    </>
+  );
+};
+
+export default RoteirosPage;
