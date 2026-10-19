@@ -12,13 +12,19 @@ const MobileMenuButton = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed right-3 z-40 bg-background rounded-bl-[18px] lg:hidden cursor-pointer select-none"
+        className="fixed right-3 z-40 bg-[#00518f] text-white rounded-bl-[18px] lg:hidden cursor-pointer select-none"
         style={{ top: "calc(env(safe-area-inset-top, 0px) + 12px)" }}
       >
         <div className="relative pb-3 px-4">
-          <h1 className="text-sm font-light">Menu</h1>
-          <Graphic className="absolute -bottom-4 right-0 rotate-90" />
-          <Graphic className="absolute -left-4 top-0 rotate-90" />
+          <h1 className="text-sm font-light text-white">Menu</h1>
+          <Graphic
+            fillClassName="fill-[#00518f]"
+            className="absolute -bottom-4 right-0 rotate-90"
+          />
+          <Graphic
+            fillClassName="fill-[#00518f]"
+            className="absolute -left-4 top-0 rotate-90"
+          />
         </div>
       </button>
 

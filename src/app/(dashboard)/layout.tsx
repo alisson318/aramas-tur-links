@@ -13,21 +13,23 @@ export const metadata: Metadata = {
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
-          "--header-height": "calc(var(--spacing) * 12)",
-        } as React.CSSProperties
-      }
-    >
-      <DashboardSidebar variant="inset" />
-      <SidebarInset>
-        <SiteHeader />
-        {children}
-        <CreatePhotoModal />
-      </SidebarInset>
-    </SidebarProvider>
+    <div className="min-h-svh bg-background text-foreground">
+      <SidebarProvider
+        style={
+          {
+            "--sidebar-width": "calc(var(--spacing) * 72)",
+            "--header-height": "calc(var(--spacing) * 12)",
+          } as React.CSSProperties
+        }
+      >
+        <DashboardSidebar variant="inset" />
+        <SidebarInset>
+          <SiteHeader />
+          {children}
+          <CreatePhotoModal />
+        </SidebarInset>
+      </SidebarProvider>
+    </div>
   );
 }
 

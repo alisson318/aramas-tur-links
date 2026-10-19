@@ -1,20 +1,11 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useEffect } from "react";
 
-const THEME_COLORS: Record<string, string> = {
-  light: "#ffffff",
-  dark: "#0a0a0a",
-};
+const BRAND_THEME_COLOR = "#00518f";
 
 export function ThemeColorMeta() {
-  const { resolvedTheme } = useTheme();
-
   useEffect(() => {
-    const color =
-      resolvedTheme === "dark" ? THEME_COLORS.dark : THEME_COLORS.light;
-
     let meta = document.head.querySelector<HTMLMetaElement>(
       'meta[name="theme-color"][data-managed="theme-color-meta"]'
     );
@@ -26,8 +17,8 @@ export function ThemeColorMeta() {
       document.head.appendChild(meta);
     }
 
-    meta.content = color;
-  }, [resolvedTheme]);
+    meta.content = BRAND_THEME_COLOR;
+  }, []);
 
   return null;
 }

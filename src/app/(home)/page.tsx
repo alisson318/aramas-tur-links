@@ -18,7 +18,7 @@ const agency = {
   name: "Aramas Tur",
   role: "Agência de turismo",
   description:
-    "Com mais de 30 anos de tradição, a Aramas Tur proporciona as melhores experiências de viagem. Oferecemos passagens, roteiros completos e atendimento próximo para você explorar cada destino com segurança e tranquilidade, do planejamento ao retorno.",
+    "Com mais de 30 anos de tradição, a Aramas Tur proporciona as melhores experiências de viagem. Oferecemos viagens rodoviárias e aéreas, cruzeiros, fretamento de ônibus e roteiros completos. Tudo isso com um atendimento humanizado para você explorar cada destino com segurança e tranquilidade, do planejamento ao retorno.",
 };
 
 const promotions = [
@@ -136,7 +136,7 @@ const LinkButton = ({
       aria-label={title}
       className={`w-full h-full p-3 lg:p-5 rounded-xl flex justify-between items-center cursor-pointer group transition-all duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         primary
-          ? "bg-primary text-white dark:text-black hover:bg-primary"
+          ? "bg-white text-black hover:bg-white/90"
           : "bg-muted hover:bg-muted-foreground/10"
       }`}
     >

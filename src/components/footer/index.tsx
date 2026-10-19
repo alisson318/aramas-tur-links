@@ -51,10 +51,10 @@ interface FooterProps {
 
 const Footer = ({ faqItems = defaultFaqItems }: FooterProps) => {
   return (
-    <div className="flex flex-col items-center lg:items-start p-16 pb-12 gap-8 lg:gap-16 rounded-xl font-light relative flex-1 bg-primary text-white dark:text-black">
+    <div className="flex flex-col items-center lg:items-start p-16 pb-12 gap-8 lg:gap-16 rounded-xl font-light relative flex-1 bg-neutral-950 text-white">
       <div className="flex flex-col lg:flex-row gap-4 items-center">
         {/* LOGO  */}
-        <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full bg-background">
+        <div className="relative size-[60px] shrink-0 overflow-hidden rounded-full bg-neutral-900">
           <Image
             src="/imagens/logo-aramas.jpeg"
             alt="Logo Aramas Tur"
@@ -79,12 +79,12 @@ const Footer = ({ faqItems = defaultFaqItems }: FooterProps) => {
             <AccordionItem
               key={item.question}
               value={item.question}
-              className="border-white/15 dark:border-black/15"
+              className="border-white/15"
             >
-              <AccordionTrigger className="font-light [&>svg]:text-current">
+              <AccordionTrigger className="font-light text-white [&>svg]:text-white">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="opacity-60">
+              <AccordionContent className="text-white/60">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
@@ -92,7 +92,7 @@ const Footer = ({ faqItems = defaultFaqItems }: FooterProps) => {
         </Accordion>
       </div>
 
-      <p className="text-xs md:text-sm text-center md:text-left opacity-60">
+      <p className="text-xs md:text-sm text-center md:text-left text-white/60">
         © 2026 Aramas Tur. Todos os direitos reservados.
       </p>
     </div>

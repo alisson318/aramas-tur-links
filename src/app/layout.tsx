@@ -36,7 +36,11 @@ export default function RootLayout({
       <body className={`${readexPro.className} antialiased`}>
         <NuqsAdapter>
           <TRPCReactProvider>
-            <ThemeProvider attribute="class">
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem={false}
+            >
               <ThemeColorMeta />
               <Toaster />
               {children}

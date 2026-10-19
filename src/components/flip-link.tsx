@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 
-import { getExternalLinkProps } from "@/lib/utils";
+import { cn, getExternalLinkProps } from "@/lib/utils";
 
 const DURATION = 0.25;
 const STAGGER = 0.025;
@@ -10,16 +10,20 @@ const STAGGER = 0.025;
 interface Props {
   children: string;
   href: string;
+  className?: string;
 }
 
-const FlipLink = ({ children, href }: Props) => {
+const FlipLink = ({ children, href, className }: Props) => {
   return (
     <motion.a
       initial="initial"
       whileHover="hovered"
       href={href}
       {...getExternalLinkProps(href)}
-      className="relative block overflow-hidden whitespace-nowrap font-light text-sm"
+      className={cn(
+        "relative block overflow-hidden whitespace-nowrap font-light text-sm",
+        className
+      )}
     >
       <div>
         {children.split("").map((l, i) => (

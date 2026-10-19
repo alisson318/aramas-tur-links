@@ -5,27 +5,23 @@ import { siteConfig } from "@/site.config";
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex gap-2 items-center">
+    <Link
+      href="/"
+      className="flex gap-2 items-center text-white transition-opacity hover:opacity-80"
+    >
       <div className="relative size-[18px] shrink-0 overflow-hidden">
-        <Image
-          src="/imagens/logo-aramas-preta.png"
-          alt="Aramas Tur"
-          width={24}
-          height={24}
-          className="size-full object-contain block dark:hidden"
-        />
         <Image
           src="/imagens/logo-aramas-branca.png"
           alt="Aramas Tur"
           width={24}
           height={24}
-          className="size-full object-contain hidden dark:block"
+          className="size-full object-contain"
         />
       </div>
       <WordRotate
         label={siteConfig.name}
         label2={siteConfig.tagline}
-        style="font-medium whitespace-nowrap"
+        style="font-medium whitespace-nowrap text-white"
       />
     </Link>
   );

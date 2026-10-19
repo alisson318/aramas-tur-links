@@ -223,8 +223,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
   body {
-    @apply bg-background text-foreground;
+    /* Brand page canvas — cards keep light surfaces via muted/card/background tokens */
+    @apply bg-[#00518f] text-white;
+  }
+
+  /*
+   * Light UI surfaces sit on the brand-blue page. Reset their text to the
+   * theme foreground so card copy stays dark (or light in dark mode).
+   */
+  .bg-muted,
+  .bg-background,
+  .bg-card,
+  .bg-secondary,
+  .bg-accent,
+  .bg-popover,
+  .bg-white {
+    color: var(--foreground);
   }
 }
 

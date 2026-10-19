@@ -34,7 +34,7 @@ const NavigationCard = ({ title, image, href, sizes }: NavigationCardProps) => {
       </AspectRatio>
 
       <div className="absolute top-0 left-0 z-20 max-w-[92%]">
-        <div className="relative bg-background rounded-br-[18px]">
+        <div className="relative bg-[#00518f] text-white rounded-br-[18px]">
           <div className="pt-2 px-4 pb-3 overflow-hidden">
             <div className="text-sm font-light flex items-center">
               <p className="max-w-[11rem] leading-snug sm:max-w-[14rem]">
@@ -47,10 +47,10 @@ const NavigationCard = ({ title, image, href, sizes }: NavigationCardProps) => {
           </div>
 
           <div className="absolute size-[18px]">
-            <Graphic />
+            <Graphic fillClassName="fill-[#00518f]" />
           </div>
           <div className="absolute size-[18px] top-0 -right-[18px]">
-            <Graphic />
+            <Graphic fillClassName="fill-[#00518f]" />
           </div>
         </div>
       </div>
