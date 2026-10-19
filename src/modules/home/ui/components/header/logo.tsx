@@ -9,13 +9,13 @@ const Logo = () => {
       href="/"
       className="flex gap-2 items-center text-white transition-opacity hover:opacity-80"
     >
-      <div className="relative size-[18px] shrink-0 overflow-hidden">
+      <div className="relative size-[18px] shrink-0">
         <Image
           src="/imagens/logo-aramas-branca.png"
           alt="Aramas Tur"
           width={24}
           height={24}
-          className="size-full object-contain"
+          className="size-full origin-center object-contain scale-150"
         />
       </div>
       <WordRotate
