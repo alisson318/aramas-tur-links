@@ -38,9 +38,9 @@ const roteirosFaqItems: FaqItem[] = [
 
 const destinations = [
   {
-    title: "Beto Carrero",
-    image: "/imagens/beto-carrero.jpg",
-    href: "https://aramastur.com/beto-carrero/",
+    title: "Aparecida do Norte",
+    image: "/imagens/aparecida.jpg",
+    href: "https://aramastur.com/aparecida-do-norte/",
   },
   {
     title: "Gramado e Canela",
@@ -96,9 +96,9 @@ const destinations = [
     href: "#",
   },
   {
-    title: "Aparecida do Norte",
-    image: "/imagens/aparecida.jpg",
-    href: "https://aramastur.com/aparecida-do-norte/",
+    title: "Beto Carrero",
+    image: "/imagens/beto-carrero.jpg",
+    href: "https://aramastur.com/beto-carrero/",
   },
 ];
 
