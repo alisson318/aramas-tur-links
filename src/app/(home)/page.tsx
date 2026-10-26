@@ -33,11 +33,6 @@ const promotions = [
     alt: "Promoção Aramas 2",
   },
   {
-    id: "promocao-3",
-    image: "/imagens/promocao-3.jpg",
-    alt: "Promoção Aramas 3",
-  },
-  {
     id: "promocao-4",
     image: "/imagens/promocao-4.jpg",
     alt: "Promoção Aramas 4",
