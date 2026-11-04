@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  ...(process.env.VERCEL !== "1" && {
-    output: "standalone",
-  }),
+  output: "export",
   reactCompiler: true,
   images: {
+    unoptimized: true,
     qualities: [65, 75],
   },
 };
