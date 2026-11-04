@@ -104,13 +104,13 @@ const destinations = [
 
 const RoteirosPage = () => {
   return (
-    <>
+    <div className="dark min-h-screen">
       <Header />
       <main className="min-h-screen p-3 space-y-3">
-        <section className="flex flex-col gap-6 px-6 pb-6 pt-16 lg:px-10 lg:pb-10 lg:pt-20 bg-muted rounded-xl font-light">
+        <section className="flex flex-col gap-6 px-6 pb-6 pt-16 lg:px-10 lg:pb-10 lg:pt-20 bg-neutral-900 text-white rounded-xl font-light">
           <Link
             href="/"
-            className="w-fit flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-foreground"
+            className="w-fit flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
           >
             <PiArrowLeft size={16} />
             Voltar
@@ -118,7 +118,7 @@ const RoteirosPage = () => {
 
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl lg:text-3xl">Nossos Roteiros</h1>
-            <p className="text-text-muted text-[15px]">
+            <p className="text-white/60 text-[15px]">
               Conheça os nossos roteiros através de viagens reais que já
               fizemos. Descubra como é a experiência inesquecível de viajar com
               a Aramas Tur.
@@ -138,7 +138,7 @@ const RoteirosPage = () => {
 
         <Footer faqItems={roteirosFaqItems} />
       </main>
-    </>
+    </div>
   );
 };
 

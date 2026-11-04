@@ -1,13 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-import { TRPCReactProvider } from "@/trpc/client";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeColorMeta } from "@/components/theme-color-meta";
 import { siteConfig } from "@/site.config";
-// Vercel Analytics
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -32,21 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${readexPro.className} antialiased`}>
-        <NuqsAdapter>
-          <TRPCReactProvider>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="dark"
-              enableSystem={false}
-            >
-              <ThemeColorMeta />
-              <Toaster />
-              {children}
-            </ThemeProvider>
-          </TRPCReactProvider>
-        </NuqsAdapter>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          <ThemeColorMeta />
+          <Toaster />
+          {children}
+        </ThemeProvider>
         <SpeedInsights />
         <Analytics />
       </body>
