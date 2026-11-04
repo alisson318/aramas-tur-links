@@ -27,16 +27,6 @@ const promotions = [
     image: "/imagens/promocao-1.jpg",
     alt: "Promoção Aramas 1",
   },
-  {
-    id: "promocao-2",
-    image: "/imagens/promocao-2.jpg",
-    alt: "Promoção Aramas 2",
-  },
-  {
-    id: "promocao-4",
-    image: "/imagens/promocao-4.jpg",
-    alt: "Promoção Aramas 4",
-  },
 ];
 
 const socialLinks: { title: string; href: string; icon: ReactNode }[] = [
