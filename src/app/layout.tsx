@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeColorMeta } from "@/components/theme-color-meta";
+import { CleanUrl } from "@/components/clean-url";
 import { siteConfig } from "@/site.config";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -37,6 +38,7 @@ export default function RootLayout({
           enableSystem={false}
         >
           <ThemeColorMeta />
+          <CleanUrl />
           <Toaster />
           {children}
         </ThemeProvider>
